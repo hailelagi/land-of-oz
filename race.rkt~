@@ -1,0 +1,30 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname race) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+; RACING GAME
+
+; physical contants
+(define WIDTH-OF-WORLD 200)
+(define WHEEL-DISTANCE (* WHEEL-RADIUS 5))
+
+; graphical constants (view/game) objects
+(define WHEEL
+  (circle WHEEL-RADIUS "solid" "black"))
+
+(define SPACE
+  (rectangle WHEEL-RADIUS "white")
+  )
+
+(define BOTH-WHEELS
+  (besdie WHEEL SPACE WHEEL))
+
+; data representation of all possible states of the world
+; A WorldState is a Number
+; It is the number of pixels between the left border of the scene
+; and the car
+; TODO - count the number of clock ticks that have passed as world state
+
+; map WorldState (model) to the Canvas(view)
+; render
+
+; Event handlers and how they modify world state
